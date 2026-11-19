@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>To Do List</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f6fc;
+  }
+
+  .box {
+    width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border: 2px solid navy;
+    border-radius: 10px;
+  }
+
+  h2 {
+    text-align: center;
+    color: navy;
+  }
+
+  #task {
+    width: 65%;
+    padding: 8px;
+  }
+
+  button {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    padding: 10px;
+    margin-top: 8px;
+    background-color: #eef4ff;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  li.done span {
+    text-decoration: line-through;
+    color: gray;
+  }
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h2>My To Do List</h2>
+  <input type="text" id="task" placeholder="Enter a task">
+  <button onclick="addTask()">Add</button>
+  <ul id="list"></ul>
+</div>
+
+<script>
+function addTask() {
+  var input = document.getElementById("task");
+  var text = input.value;
+
+  if (text == "") {
+    alert("Please enter a task");
+    return;
+  }
+
+  var li = document.createElement("li");
+
+  var span = document.createElement("span");
+  span.innerHTML = text;
+  span.onclick = function () {
+    li.classList.toggle("done");
+  };
+
+  var btn = document.createElement("button");
+  btn.innerHTML = "Delete";
+  btn.onclick = function () {
+    li.remove();
+  };
+
+  li.appendChild(span);
+  li.appendChild(btn);
+  document.getElementById("list").appendChild(li);
+
+  input.value = "";
+}
+</script>
+
+</body>
+</html>
