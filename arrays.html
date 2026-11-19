@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Arrays</title>
+</head>
+<body>
+
+<h2>JavaScript Arrays</h2>
+<div id="output"></div>
+
+<script>
+var out = document.getElementById("output");
+
+var fruits = ["Apple", "Banana", "Mango"];
+out.innerHTML += "<p>Array: " + fruits + "</p>";
+
+out.innerHTML += "<p>First element: " + fruits[0] + "</p>";
+out.innerHTML += "<p>Length: " + fruits.length + "</p>";
+
+fruits.push("Orange");
+out.innerHTML += "<p>After push: " + fruits + "</p>";
+
+fruits.pop();
+out.innerHTML += "<p>After pop: " + fruits + "</p>";
+
+fruits.unshift("Grapes");
+out.innerHTML += "<p>After unshift: " + fruits + "</p>";
+
+fruits.shift();
+out.innerHTML += "<p>After shift: " + fruits + "</p>";
+
+out.innerHTML += "<p>Index of Banana: " + fruits.indexOf("Banana") + "</p>";
+
+out.innerHTML += "<p>Joined with dash: " + fruits.join(" - ") + "</p>";
+
+fruits.sort();
+out.innerHTML += "<p>After sort: " + fruits + "</p>";
+
+fruits.reverse();
+out.innerHTML += "<p>After reverse: " + fruits + "</p>";
+
+var part = fruits.slice(0, 2);
+out.innerHTML += "<p>Slice (0 to 2): " + part + "</p>";
+
+fruits.splice(1, 1);
+out.innerHTML += "<p>After splice (remove 1 item at position 1): " + fruits + "</p>";
+
+var numbers = [10, 20, 30, 40, 50];
+var total = 0;
+out.innerHTML += "<p>Numbers using loop: ";
+for (var i = 0; i < numbers.length; i++) {
+  out.innerHTML += numbers[i] + " ";
+  total = total + numbers[i];
+}
+out.innerHTML += "</p>";
+out.innerHTML += "<p>Sum of numbers: " + total + "</p>";
+
+var doubled = numbers.map(function (n) {
+  return n * 2;
+});
+out.innerHTML += "<p>Doubled using map: " + doubled + "</p>";
+
+var big = numbers.filter(function (n) {
+  return n > 25;
+});
+out.innerHTML += "<p>Numbers greater than 25: " + big + "</p>";
+</script>
+
+</body>
+</html>
