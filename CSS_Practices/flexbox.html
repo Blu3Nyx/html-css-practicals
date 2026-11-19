@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flexbox</title>
+<style>
+  .box {
+    width: 60px;
+    height: 60px;
+    background-color: navy;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    margin: 5px;
+  }
+
+  .container {
+    background-color: lightgray;
+    border: 2px solid black;
+    margin-bottom: 30px;
+    padding: 10px;
+  }
+
+  .row {
+    display: flex;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .center-items {
+    display: flex;
+    justify-content: center;
+  }
+
+  .space-between {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .space-around {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .align-center {
+    display: flex;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
+  }
+
+  .grow {
+    display: flex;
+  }
+
+  .grow .box {
+    flex-grow: 1;
+    width: auto;
+  }
+</style>
+</head>
+<body>
+
+<h2>Flexbox Practical</h2>
+
+<p>1. Row (default)</p>
+<div class="container row">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+</div>
+
+<p>2. Column</p>
+<div class="container column">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+</div>
+
+<p>3. Justify center</p>
+<div class="container center-items">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+</div>
+
+<p>4. Space between</p>
+<div class="container space-between">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+</div>
+
+<p>5. Space around</p>
+<div class="container space-around">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+</div>
+
+<p>6. Align items center (perfect center)</p>
+<div class="container align-center">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+</div>
+
+<p>7. Flex wrap</p>
+<div class="container wrap">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+  <div class="box">6</div>
+</div>
+
+<p>8. Flex grow</p>
+<div class="container grow">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+</div>
+
+</body>
+</html>
