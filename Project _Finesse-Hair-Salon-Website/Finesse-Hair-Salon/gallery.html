@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Finesse Hair Salon - premium hair, beauty and grooming services.">
+
+  <title>Gallery | Finesse Hair Salon</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Gallery image cursor */
+    .gallery-item img {
+      cursor: zoom-in;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Fullscreen image overlay */
+    .image-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.94);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px 30px;
+    }
+
+    .image-modal[hidden] {
+      display: none !important;
+    }
+
+    .image-modal img {
+      display: block;
+      max-width: 95%;
+      max-height: 85vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+
+    /* Close button */
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      color: white;
+      background: transparent;
+      border: none;
+      font-size: 42px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .modal-close:hover {
+      color: #e8c99b;
+    }
+
+    /* Image caption */
+    .modal-caption {
+      position: absolute;
+      bottom: 12px;
+      left: 10px;
+      right: 10px;
+      color: white;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .image-modal img {
+        max-width: 100%;
+        max-height: 80vh;
+      }
+
+      .modal-close {
+        top: 12px;
+        right: 18px;
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <span>Premium Hair & Beauty Studio</span>
+    <span>Mon–Sun: 9:00 AM – 8:30 PM | +91 98765 43210</span>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<header>
+  <nav class="navbar container" aria-label="Main navigation">
+
+    <a class="logo" href="index.html">
+      Finesse <span>Hair Salon</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a class="active" href="gallery.html">Gallery</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="appointment.html">Appointment</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+  </nav>
+</header>
+
+<main>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Our Work</span>
+
+      <h1>Inside Finesse.</h1>
+
+      <p>
+        A visual glimpse of our salon, styling, beauty and grooming experience.
+        Click any image to view it in fullscreen.
+      </p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section">
+    <div class="container">
+
+      <div class="section-head">
+        <span class="eyebrow">Gallery</span>
+        <h2>Style in Every Detail</h2>
+        <p>
+          Explore the atmosphere and craft behind the Finesse experience.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=900&q=80"
+               alt="Interior at Finesse Hair Salon" loading="lazy">
+          <figcaption>Interior</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80"
+               alt="Hair Styling at Finesse Hair Salon" loading="lazy">
+          <figcaption>Hair Styling</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=80"
+               alt="Hair Color at Finesse Hair Salon" loading="lazy">
+          <figcaption>Hair Color</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=800&q=80"
+               alt="Bridal Styling at Finesse Hair Salon" loading="lazy">
+          <figcaption>Bridal Styling</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=800&q=80"
+               alt="Makeup at Finesse Hair Salon" loading="lazy">
+          <figcaption>Makeup</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80"
+               alt="Hair Grooming at Finesse Hair Salon" loading="lazy">
+          <figcaption>Hair Grooming</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80"
+               alt="Relaxing Spa at Finesse Hair Salon" loading="lazy">
+          <figcaption>Relaxing Spa</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://images.openai.com/static-rsc-4/V2oSEoh6i-eIRzwTmbD_DMZcHZg6g0nz9eJYwOUwkyX3_J3wHu4SXG2tnFgoFEykPJVNRZereky56OlAwmw9TKcg-CUwWEWXpLwVN2szreqOuCq5IjWQvW4PNcwxsp0tKKAWf4eVmP6oqUz3aYAuIqgSQVZ3OQ4Yt2L01JNA1MThxGTfbKLi5LBNBvpl1c5J?purpose=fullsize"
+               alt="Beauty Detail at Finesse Hair Salon" loading="lazy">
+          <figcaption>Beauty Detail</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://images.openai.com/static-rsc-4/uTmi2bkZz6Z-9ZOUaLHXStmZkxS6N-YsM6gfOqIoxFUAB9nqfM_Wv1OPJjVoKG3Tt8fpgHBegltAQipD7qU6K3SEUxA60wXoS3wPmnBwJzz9YtLydxeAvteTn5az2_2pmw7HBycyNB-va-w3sKyvOlXNNUrRPGRjvl8cGhfRsEG25rUnpLvfDLy_8bxqeBT2?purpose=fullsize"
+               alt="Color Studio at Finesse Hair Salon" loading="lazy">
+          <figcaption>Color Studio</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80"
+               alt="Modern Styling at Finesse Hair Salon" loading="lazy">
+          <figcaption>Modern Styling</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FULLSCREEN IMAGE MODAL -->
+<div
+  id="image-modal"
+  class="image-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Fullscreen gallery image"
+  hidden
+>
+  <button
+    type="button"
+    class="modal-close"
+    id="modal-close"
+    aria-label="Close fullscreen image"
+  >&times;</button>
+
+  <img id="modal-image" src="" alt="">
+
+  <p id="modal-caption" class="modal-caption"></p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-grid">
+
+    <div>
+      <a class="logo" href="index.html">
+        Finesse <span>Hair Salon</span>
+      </a>
+
+      <p style="margin-top:14px">
+        A premium destination for modern hair, beauty and grooming experiences.
+        Crafted with care, styled with finesse.
+      </p>
+    </div>
+
+    <div>
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="appointment.html">Book Appointment</a></li>
+        <li><a href="offers.html">Special Offers</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li>21 Fashion Street, Pune</li>
+        <li>+91 98765 43210</li>
+        <li>hello@finessesalon.in</li>
+        <li>9:00 AM – 8:30 PM</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="container footer-bottom">
+    <span>© 2026 Finesse Hair Salon. All Rights Reserved.</span>
+    <span>College Web Development Project • HTML5 & CSS3</span>
+  </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+  const galleryImages = document.querySelectorAll(".gallery-item img");
+
+  const modal = document.getElementById("image-modal");
+  const modalImage = document.getElementById("modal-image");
+  const modalCaption = document.getElementById("modal-caption");
+  const closeButton = document.getElementById("modal-close");
+
+  let previouslyFocusedElement = null;
+
+  // Open image in fullscreen
+  galleryImages.forEach(function(image) {
+
+    image.addEventListener("click", function() {
+
+      previouslyFocusedElement = image;
+
+      modalImage.src = image.src;
+      modalImage.alt = image.alt;
+
+      const caption = image.closest("figure").querySelector("figcaption");
+      modalCaption.textContent = caption ? caption.textContent : image.alt;
+
+      modal.hidden = false;
+      document.body.style.overflow = "hidden";
+
+      closeButton.focus();
+
+    });
+
+  });
+
+  // Close fullscreen image
+  function closeModal() {
+
+    modal.hidden = true;
+    modalImage.src = "";
+    document.body.style.overflow = "";
+
+    if (previouslyFocusedElement) {
+      previouslyFocusedElement.focus();
+    }
+
+  }
+
+  closeButton.addEventListener("click", closeModal);
+
+  // Close when clicking the dark background
+  modal.addEventListener("click", function(event) {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Close by pressing Escape
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape" && !modal.hidden) {
+      closeModal();
+    }
+  });
+</script>
+
+</body>
+</html>

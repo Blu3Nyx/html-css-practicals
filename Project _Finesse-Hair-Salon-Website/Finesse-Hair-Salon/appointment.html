@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Finesse Hair Salon - premium hair, beauty and grooming services.">
+
+  <title>Book Appointment | Finesse Hair Salon</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .success-message {
+      display: block;
+      background: #e8f7ec;
+      color: #216e39;
+      border: 1px solid #a7dfb5;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+
+    .success-message h3 {
+      margin: 0 0 10px;
+      color: #216e39;
+    }
+
+    .success-message p {
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .success-message[hidden] {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <span>Premium Hair & Beauty Studio</span>
+    <span>Mon–Sun: 9:00 AM – 8:30 PM | +91 98765 43210</span>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<header>
+  <nav class="navbar container" aria-label="Main navigation">
+
+    <a class="logo" href="index.html">
+      Finesse <span>Hair Salon</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a class="active" href="appointment.html">Appointment</a></li>
+      <li><a href="offers.html">Offers</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+  </nav>
+</header>
+
+<main>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Appointments</span>
+
+      <h1>Reserve Your Finesse Moment.</h1>
+
+      <p>
+        Book your appointment with Finesse Hair Salon.
+        Fill in the form below to submit your appointment request.
+      </p>
+    </div>
+  </section>
+
+  <!-- APPOINTMENT SECTION -->
+  <section class="section">
+    <div class="container form-wrap">
+
+      <div class="card">
+
+        <div class="section-head" style="margin-bottom:30px">
+          <span class="eyebrow">Booking Form</span>
+
+          <h2>Book an Appointment</h2>
+
+          <p>
+            Fields marked with * are required.
+            Please enter your correct details.
+          </p>
+        </div>
+
+        <!-- SUCCESS MESSAGE -->
+        <div
+          id="success-message"
+          class="success-message"
+          role="status"
+          aria-live="polite"
+          hidden
+        >
+          <h3>✓ Appointment Request Submitted Successfully!</h3>
+
+          <p>
+            Thank you for choosing Finesse Hair Salon.
+            Your appointment request has been submitted successfully.
+          </p>
+        </div>
+
+        <!-- APPOINTMENT FORM -->
+        <form id="appointment-form" action="#" method="post">
+
+          <div class="form-grid">
+
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Enter your full name"
+                minlength="2"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="mobile">Mobile Number *</label>
+
+              <input
+                id="mobile"
+                name="mobile"
+                type="tel"
+                placeholder="10-digit mobile number"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                inputmode="numeric"
+                title="Enter a valid 10-digit mobile number"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="gender">Gender *</label>
+
+              <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service *</label>
+
+             
+<select id="service" name="service" required>
+    <option value="">Select a service</option>
+
+    <!-- Hair Services -->
+    <option value="Haircut">Haircut</option>
+    <option value="Hair Styling">Hair Styling</option>
+    <option value="Hair Coloring">Hair Coloring</option>
+    <option value="Hair Spa">Hair Spa</option>
+    <option value="Hair Treatment">Hair Treatment</option>
+
+    <!-- Men's Services -->
+    <option value="Men's Haircut & Styling">Men's Haircut & Styling</option>
+    <option value="Shaving & Grooming">Shaving & Grooming</option>
+    <option value="Beard Styling">Beard Styling</option>
+    <option value="Men's Hair Coloring">Men's Hair Coloring</option>
+    <option value="Men's Head Massage">Men's Head Massage</option>
+
+    <!-- Makeup Services -->
+    <option value="Bridal Makeup">Bridal Makeup</option>
+    <option value="Party Makeup">Party Makeup</option>
+
+    <!-- Beauty Services -->
+    <option value="Facial">Facial</option>
+    <option value="Manicure">Manicure</option>
+    <option value="Pedicure">Pedicure</option>
+    <option value="Head Massage">Head Massage</option>
+</select>
+
+            </div>
+
+            <div class="form-group">
+              <label for="stylist">Preferred Stylist</label>
+
+              <select id="stylist" name="stylist">
+                <option value="">Any available stylist</option>
+                <option value="Aarav Deshmukh">Aarav Deshmukh</option>
+                <option value="Meera Kapoor">Meera Kapoor</option>
+                <option value="Anaya Rao">Anaya Rao</option>
+                <option value="Kabir Malhotra">Kabir Malhotra</option>
+                <option value="Ishita Sen">Ishita Sen</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="date">Preferred Date *</label>
+
+              <input
+                id="date"
+                name="date"
+                type="date"
+                min="2026-10-24"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="time">Preferred Time *</label>
+
+              <input
+                id="time"
+                name="time"
+                type="time"
+                min="09:00"
+                max="20:00"
+                required
+              >
+            </div>
+
+            <div class="form-group full">
+              <label for="message">Message / Special Request</label>
+
+              <textarea
+                id="message"
+                name="message"
+                maxlength="500"
+                placeholder="Tell us about your preferred look or any special request..."
+              ></textarea>
+            </div>
+
+            <div class="form-group full">
+              <div class="form-actions">
+
+                <button class="btn" type="submit">
+                  Submit Appointment
+                </button>
+
+                <button class="btn btn-outline" type="reset">
+                  Reset Form
+                </button>
+
+              </div>
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-grid">
+
+    <div>
+      <a class="logo" href="index.html">
+        Finesse <span>Hair Salon</span>
+      </a>
+
+      <p style="margin-top:14px">
+        A premium destination for modern hair, beauty and grooming
+        experiences. Crafted with care, styled with finesse.
+      </p>
+    </div>
+
+    <div>
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="appointment.html">Book Appointment</a></li>
+        <li><a href="offers.html">Special Offers</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="faq.html">FAQs</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li>21 Fashion Street, Pune</li>
+        <li>+91 98765 43210</li>
+        <li>hello@finessesalon.in</li>
+        <li>9:00 AM – 8:30 PM</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="container footer-bottom">
+    <span>© 2026 Finesse Hair Salon. All Rights Reserved.</span>
+    <span>College Web Development Project • HTML5 & CSS3</span>
+  </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.getElementById("appointment-form");
+    const successMessage = document.getElementById("success-message");
+
+    // Show success message when form is submitted
+    form.addEventListener("submit", function (event) {
+
+      // Stop the page from reloading
+      event.preventDefault();
+
+      // Reset fields first
+      // Then show the message so it remains visible
+      form.reset();
+
+      successMessage.hidden = false;
+
+      // Scroll to the success message
+      successMessage.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+
+    });
+
+    // Hide the message only when the user clicks Reset Form
+    form.addEventListener("reset", function () {
+      successMessage.hidden = true;
+    });
+
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+Place local salon images here if your college submission requires a fully offline project. The HTML currently uses hosted image URLs for realistic visuals.

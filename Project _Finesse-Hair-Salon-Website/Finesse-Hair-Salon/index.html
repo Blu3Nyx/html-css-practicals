@@ -1,0 +1,615 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Finesse Unisex Hair Salon in Pune offers haircuts, styling, coloring, hair care, beauty services and grooming for everyone.">
+
+    <title>Home | Finesse Hair Salon</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Fullscreen Gallery CSS -->
+    <style>
+        .gallery-item img {
+            cursor: zoom-in;
+        }
+
+        .image-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            background: rgba(0, 0, 0, 0.95);
+        }
+
+        .image-modal[hidden] {
+            display: none !important;
+        }
+
+        .image-modal img {
+            display: block;
+            max-width: 95%;
+            max-height: 85vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            border: none;
+            background: transparent;
+            color: #fff;
+            font-size: 42px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .modal-close:hover {
+            color: #e8c99b;
+        }
+
+        .modal-caption {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            color: #fff;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        @media (max-width: 600px) {
+            .image-modal img {
+                max-width: 100%;
+                max-height: 80vh;
+            }
+
+            .modal-close {
+                top: 12px;
+                right: 18px;
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+        <div class="container">
+            <span>Premium Unisex Hair & Beauty Studio</span>
+            <span>Mon–Sun: 9:00 AM – 8:30 PM | +91 98765 43210</span>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar container" aria-label="Main navigation">
+
+            <a class="logo" href="index.html">
+                Finesse <span>Hair Salon</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="appointment.html">Appointment</a></li>
+                <li><a href="offers.html">Offers</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+
+                <span class="eyebrow">Premium Unisex Hair & Beauty Studio</span>
+
+                <h1>Your Style, Our Passion.</h1>
+
+                <p>
+                    Discover personalized hair, beauty and grooming services for women and men,
+                    designed to help you look confident and feel your best.
+                </p>
+
+                <div class="btn-row">
+                    <a class="btn" href="appointment.html">Book Appointment</a>
+                    <a class="btn btn-light" href="services.html">Explore Services</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Welcome Section -->
+        <section class="section">
+            <div class="container grid-2">
+
+                <div class="image-card feature-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1000&q=80"
+                        alt="Modern Finesse Hair Salon interior and stylist">
+                </div>
+
+                <div>
+                    <span class="eyebrow">Welcome to Finesse</span>
+
+                    <h2>Where Beauty Meets Finesse.</h2>
+
+                    <p style="margin-top:16px">
+                        Finesse is a welcoming unisex salon offering haircuts, styling, coloring,
+                        hair care and grooming services for women and men. Our team listens
+                        to your preferences and recommends styles suited to your needs.
+                    </p>
+
+                    <ul class="check-list">
+                        <li>Skilled hair, beauty and grooming professionals</li>
+                        <li>Premium products and hygienic practices</li>
+                        <li>Personalized consultations for women and men</li>
+                        <li>Relaxed, elegant and welcoming atmosphere</li>
+                    </ul>
+
+                    <a class="btn" href="about.html">Discover Our Story</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Popular Services Section -->
+        <section class="section section-alt">
+            <div class="container">
+
+                <div class="section-head">
+                    <span class="eyebrow">Our Signature Services</span>
+                    <h2>Popular Services</h2>
+
+                    <p>
+                        From everyday haircuts and styling to coloring, beauty care and grooming,
+                        choose a service that suits your style.
+                    </p>
+                </div>
+
+                <div class="grid-3">
+
+                    <!-- Haircut & Styling -->
+                    <article class="card service-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80"
+                            alt="Professional hair styling">
+
+                        <div class="body">
+                            <h3>Haircut & Styling</h3>
+
+                            <p>
+                                Personalized haircuts and styling for women and men, from classic trims
+                                and layered cuts to modern styles, blow-dries and finishing.
+                            </p>
+
+                            <span class="price">From ₹499</span>
+                        </div>
+                    </article>
+
+                    <!-- Hair Wash & Blow-Dry -->
+                    <article class="card service-card">
+                        <img
+                            src="https://sushantgaikwad2803.github.io/Finnese-Hair/gallery/s10.jpg"
+                            alt="Professional hair wash and styling">
+
+                        <div class="body">
+                            <h3>Men's Haircut & Styling</h3>
+
+                            <p>
+                               Professional haircuts by Naeem Khan, regular and advanced cuts, child haircuts, and 
+                               complete grooming services for the modern gentleman.
+                            </p>
+
+                            <span class="price">From ₹1,999</span>
+                        </div>
+                    </article>
+
+                    <!-- Hair Coloring -->
+                    <article class="card service-card">
+                        <img
+                            src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=80"
+                            alt="Professional hair coloring">
+
+                        <div class="body">
+                            <h3>Hair Coloring</h3>
+
+                            <p>
+                                Refresh your look with root touch-ups, global color and highlights.
+                                Color options and final pricing depend on hair length,
+                                hair condition and the selected technique.
+                            </p>
+
+                            <span class="price">From ₹1,499</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="section">
+            <div class="container">
+
+                <div class="section-head">
+                    <span class="eyebrow">The Finesse Difference</span>
+                    <h2>Why Choose Us?</h2>
+                </div>
+
+                <div class="grid-4">
+
+                    <article class="card">
+                        <div class="icon-box">01</div>
+                        <h3>Expert Stylists</h3>
+                        <p>
+                            Skilled stylists offering hair, beauty and grooming services for women and men.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon-box">02</div>
+                        <h3>Premium Care</h3>
+                        <p>
+                            Thoughtfully selected products and a clean,
+                            comfortable salon environment.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon-box">03</div>
+                        <h3>Personal Touch</h3>
+                        <p>
+                            Every service begins with understanding your
+                            preferences and desired result.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <div class="icon-box">04</div>
+                        <h3>Easy Booking</h3>
+                        <p>
+                            Choose your service, preferred time and stylist
+                            through our simple appointment form.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Special Offers Section -->
+        <section class="section section-alt">
+            <div class="container cta">
+
+                <span class="eyebrow">Limited-Time Offer</span>
+
+                <h2>Glow, Groom & Save 20%</h2>
+
+                <p>
+                    Enjoy selected hair, beauty and grooming combinations this month.
+                    Offer terms apply.
+                </p>
+
+                <a class="btn btn-light" href="offers.html">
+                    View Special Offers
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section">
+            <div class="container">
+
+                <div class="section-head">
+                    <span class="eyebrow">Guest Stories</span>
+                    <h2>What Our Clients Say</h2>
+                </div>
+
+                <div class="grid-3">
+
+                    <article class="card testimonial">
+                        <div class="quote">“</div>
+
+                        <p>
+                            “The consultation was thoughtful and the haircut
+                            turned out exactly how I wanted. The team is warm
+                            and professional.”
+                        </p>
+
+                        <strong>— Riya Mehta</strong>
+                    </article>
+
+                    <article class="card testimonial">
+                        <div class="quote">“</div>
+
+                        <p>
+                            “Beautiful interiors, clean service and a very
+                            relaxed experience. My color looks natural and fresh.”
+                        </p>
+
+                        <strong>— Aanya Kulkarni</strong>
+                    </article>
+
+                    <article class="card testimonial">
+                        <div class="quote">“</div>
+
+                        <p>
+                            “I booked grooming for an event and everything was
+                            on time. Excellent service from start to finish.”
+                        </p>
+
+                        <strong>— Arjun Shah</strong>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Salon Gallery Section -->
+        <section class="section section-alt">
+            <div class="container">
+
+                <div class="section-head">
+                    <span class="eyebrow">A Glimpse of Finesse</span>
+                    <h2>Salon Gallery</h2>
+                </div>
+
+                <div class="gallery-grid">
+
+                    <figure class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=900&q=80"
+                            alt="Finesse salon interior">
+                        <figcaption>Our Interior</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=800&q=80"
+                            alt="Hair styling">
+                        <figcaption>Hair Styling</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=800&q=80"
+                            alt="Hair coloring">
+                        <figcaption>Color Studio</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=800&q=80"
+                            alt="Bridal beauty styling">
+                        <figcaption>Bridal Beauty</figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img
+                            src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80"
+                            alt="Men grooming">
+                        <figcaption>Men's Grooming</figcaption>
+                    </figure>
+
+                </div>
+
+                <div style="text-align:center; margin-top:30px">
+                    <a class="btn" href="gallery.html">View Full Gallery</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Final Call to Action -->
+        <section class="section">
+            <div class="container cta">
+
+                <h2>Ready for Your Next Look?</h2>
+
+                <p>
+                    Book a personalized appointment with the Finesse team today.
+                </p>
+
+                <a class="btn btn-light" href="appointment.html">
+                    Book Your Appointment
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+
+            <div>
+                <a class="logo" href="index.html">
+                    Finesse <span>Hair Salon</span>
+                </a>
+
+                <p style="margin-top:14px">
+                    A welcoming unisex destination for hair, beauty and grooming services.
+                    Crafted with care, styled with finesse.
+                </p>
+            </div>
+
+            <div>
+                <h3>Explore</h3>
+
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+
+                <ul>
+                    <li><a href="appointment.html">Book Appointment</a></li>
+                    <li><a href="offers.html">Special Offers</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="faq.html">FAQs</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Contact</h3>
+
+                <ul>
+                    <li>21 Fashion Street, Pune</li>
+                    <li>+91 98765 43210</li>
+                    <li>hello@finessesalon.in</li>
+                    <li>9:00 AM – 8:30 PM</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+            <span>© 2026 Finesse Hair Salon. All Rights Reserved.</span>
+            <span>College Web Development Project • HTML5 & CSS3</span>
+        </div>
+    </footer>
+
+    <!-- Fullscreen Image Viewer -->
+    <div
+        id="imageModal"
+        class="image-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Fullscreen gallery image"
+        hidden
+    >
+        <button
+            id="closeModal"
+            class="modal-close"
+            type="button"
+            aria-label="Close image"
+        >&times;</button>
+
+        <img id="fullImage" src="" alt="">
+
+        <p id="imageCaption" class="modal-caption"></p>
+    </div>
+
+    <!-- Gallery JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const galleryImages =
+                document.querySelectorAll(".gallery-item img");
+
+            const imageModal =
+                document.getElementById("imageModal");
+
+            const fullImage =
+                document.getElementById("fullImage");
+
+            const imageCaption =
+                document.getElementById("imageCaption");
+
+            const closeModalButton =
+                document.getElementById("closeModal");
+
+            let previouslyFocusedImage = null;
+
+            // Open image in fullscreen
+            galleryImages.forEach(function (img) {
+
+                img.addEventListener("click", function () {
+
+                    previouslyFocusedImage = img;
+
+                    fullImage.src = img.currentSrc || img.src;
+                    fullImage.alt = img.alt;
+
+                    const caption = img
+                        .closest("figure")
+                        .querySelector("figcaption");
+
+                    imageCaption.textContent =
+                        caption ? caption.textContent : img.alt;
+
+                    imageModal.hidden = false;
+
+                    document.body.style.overflow = "hidden";
+
+                    closeModalButton.focus();
+
+                });
+
+            });
+
+            // Close fullscreen image
+            function hideImageModal() {
+
+                imageModal.hidden = true;
+
+                fullImage.src = "";
+
+                document.body.style.overflow = "";
+
+                if (previouslyFocusedImage) {
+                    previouslyFocusedImage.focus();
+                }
+
+            }
+
+            closeModalButton.addEventListener(
+                "click",
+                hideImageModal
+            );
+
+            // Close by clicking the dark background
+            imageModal.addEventListener("click", function (event) {
+
+                if (event.target === imageModal) {
+                    hideImageModal();
+                }
+
+            });
+
+            // Close by pressing Escape
+            document.addEventListener("keydown", function (event) {
+
+                if (
+                    event.key === "Escape" &&
+                    !imageModal.hidden
+                ) {
+                    hideImageModal();
+                }
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
