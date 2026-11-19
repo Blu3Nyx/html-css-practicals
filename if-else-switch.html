@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>If Else and Switch</title>
+</head>
+<body>
+
+<h2>1. If Else (Pass or Fail)</h2>
+Enter marks: <input type="number" id="marks">
+<button onclick="checkResult()">Check</button>
+<p id="result1"></p>
+
+<h2>2. Else If (Grade)</h2>
+Enter marks: <input type="number" id="marks2">
+<button onclick="checkGrade()">Check Grade</button>
+<p id="result2"></p>
+
+<h2>3. Even or Odd</h2>
+Enter number: <input type="number" id="num">
+<button onclick="evenOdd()">Check</button>
+<p id="result3"></p>
+
+<h2>4. Switch (Day Name)</h2>
+Enter day number (1 to 7): <input type="number" id="day">
+<button onclick="showDay()">Show Day</button>
+<p id="result4"></p>
+
+<script>
+function checkResult() {
+  var marks = document.getElementById("marks").value;
+  if (marks >= 40) {
+    document.getElementById("result1").innerHTML = "Pass";
+  } else {
+    document.getElementById("result1").innerHTML = "Fail";
+  }
+}
+
+function checkGrade() {
+  var m = document.getElementById("marks2").value;
+  var grade;
+  if (m >= 90) {
+    grade = "A+";
+  } else if (m >= 75) {
+    grade = "A";
+  } else if (m >= 60) {
+    grade = "B";
+  } else if (m >= 40) {
+    grade = "C";
+  } else {
+    grade = "Fail";
+  }
+  document.getElementById("result2").innerHTML = "Grade: " + grade;
+}
+
+function evenOdd() {
+  var n = document.getElementById("num").value;
+  if (n % 2 == 0) {
+    document.getElementById("result3").innerHTML = n + " is Even";
+  } else {
+    document.getElementById("result3").innerHTML = n + " is Odd";
+  }
+}
+
+function showDay() {
+  var d = document.getElementById("day").value;
+  var name;
+  switch (d) {
+    case "1":
+      name = "Monday";
+      break;
+    case "2":
+      name = "Tuesday";
+      break;
+    case "3":
+      name = "Wednesday";
+      break;
+    case "4":
+      name = "Thursday";
+      break;
+    case "5":
+      name = "Friday";
+      break;
+    case "6":
+      name = "Saturday";
+      break;
+    case "7":
+      name = "Sunday";
+      break;
+    default:
+      name = "Enter a number from 1 to 7";
+  }
+  document.getElementById("result4").innerHTML = name;
+}
+</script>
+
+</body>
+</html>
